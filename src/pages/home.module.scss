@@ -22,10 +22,10 @@
     line-height: 4.5rem;
     font-weight: 900;
     margin-top: 2.5rem;
-  }
 
-  span {
-    color: var(--cyan-500);
+    span {
+      color: var(--cyan-500);
+    }
   }
 
   p {
@@ -37,5 +37,9 @@
       color: var(--cyan-500);
       font-weight: bold;
     }
+  }
+
+  button {
+    margin-top: 2.5rem;
   }
 }
