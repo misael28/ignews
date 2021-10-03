@@ -33,7 +33,7 @@ export default NextAuth({
             ])
           )
         );
-        console.log(userActiveSubscritpion);
+
         return { ...session, activeSubscription: userActiveSubscritpion };
       } catch {
         return { ...session, activeSubscription: null };
