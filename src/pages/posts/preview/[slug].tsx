@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { RichText } from "prismic-dom";
 import { getPrismicClient } from "../../../services/prismic";
 import Head from "next/head";
@@ -52,9 +52,15 @@ export default function Preview({ post }: PreviewProps) {
   );
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [],
+    paths: [
+      {
+        params: {
+          slug: "posts/preview/como-renomear-varios-arquivos-de-uma-vez-usando-o-terminal",
+        },
+      },
+    ],
     fallback: "blocking",
   };
 };
